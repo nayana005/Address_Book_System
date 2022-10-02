@@ -25,7 +25,7 @@ public class AddressBookMain {
                     addressBook.editContact();
                     break;
                 case 3:
-                    addressBook.showContacts(AddressBook.currentAddressBook);
+                    addressBook.viewContacts();
                     break;
                 case 4:
                     addressBook.deleteContact();
