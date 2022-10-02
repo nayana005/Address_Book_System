@@ -122,6 +122,45 @@ public class AddressBook{
         }
         System.out.println("current AddressBook is: "+currentAddressBookName);
     }
+    
+    void searchContact() {
+        System.out.println("1.Search by City \n2.Search by State");
+        int option = sc.nextInt();
+        switch (option) {
+            case 1:
+                System.out.println("Enter city :");
+                searchByCity(sc.next());
+                break;
+            case 2:
+                System.out.println("Enter State :");
+                searchByState(sc.next());
+                break;
+            default:
+                searchContact();
+                break;
+        }
+    }
+
+    void searchByCity(String city) {
+        System.out.println("Search Result: ");
+        for (String addressBookName : addressBookList.keySet()) {
+            addressBookList.get(addressBookName).forEach((person) -> {
+                if (person.getCity().equalsIgnoreCase(city))
+                    System.out.println(person);
+            });
+        }
+    }
+
+    void searchByState(String state) {
+        System.out.println("Search Result: ");
+        for (String addressBookName : addressBookList.keySet()) {
+            addressBookList.get(addressBookName).forEach((person) -> {
+                if (person.getState().equalsIgnoreCase(state))
+                    System.out.println(person);
+            });
+        }
+    }
+
 
     void showContacts(ArrayList addressBook){
         System.out.println("Contacts: ");
