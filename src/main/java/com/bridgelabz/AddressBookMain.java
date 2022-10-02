@@ -37,6 +37,9 @@ public class AddressBookMain {
                     addressBook.selectAddressBook();
                     break;
                 case 7:
+                    addressBook.searchContact();
+                    break;
+                case 8:
                     flag1=false;
                     break;
                 default:
