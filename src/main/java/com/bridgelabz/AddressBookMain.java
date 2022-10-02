@@ -14,7 +14,7 @@ public class AddressBookMain {
         while (flag1){
             System.out.println("*************\n"+AddressBook.addressBookList.keySet());
             System.out.println("current AddressBook Name: "+AddressBook.currentAddressBookName);
-            System.out.println("Select option\n1.Add Contact\n2.Edit Contact\n3.Show Contacts\n4.Delete Contact\n5.Add New AddressBook\n6.Select AddressBook\n7.Search Contact\n8.Show Contact Count\n9.Exit");
+            System.out.println("Select option\n1.Add Contact\n2.Edit Contact\n3.Show Contacts\n4.Delete Contact\n5.Add New AddressBook\n6.Select AddressBook\n7.Search Contact\n8.Show Contact Count\n9.Sort Contact\n10.Exit");
             int option = scanner.nextInt();
             switch (option){
                 case 1:
@@ -43,6 +43,9 @@ public class AddressBookMain {
                     addressBook.showContactCount();
                     break;
                 case 9:
+                    addressBook.sortContact();
+                    break;    
+                case 10:
                     flag1=false;
                     break;
                 default:
