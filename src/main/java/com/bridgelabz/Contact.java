@@ -2,7 +2,7 @@ package com.bridgelabz;
 
 public class Contact {
 
-	 private String firstName;
+	    private String firstName;
 	    private String lastName;
 	    private String address;
 	    private String city;
