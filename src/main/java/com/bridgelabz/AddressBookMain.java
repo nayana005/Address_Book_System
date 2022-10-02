@@ -6,9 +6,9 @@ public class AddressBookMain {
 
 	public static void main(String[] args) {
 
-		AddressBook addressBook = new AddressBook();
-		System.out.println("Welcome to Address Book System ");
-		Scanner sc = new Scanner(System.in);
+        AddressBook addressBook = new AddressBook();
+        System.out.println("Welcome to Address Book System ");
+	Scanner sc = new Scanner(System.in);
         boolean exit = false;
 
         while(!exit) {
