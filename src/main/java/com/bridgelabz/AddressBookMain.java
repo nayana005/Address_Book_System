@@ -4,46 +4,46 @@ import java.util.Scanner;
 
 public class AddressBookMain {
 
-	public static void main(String[] args) {
-
+    public static void main(String[] args) {
+        System.out.println("Welcome to Address-book");
         AddressBook addressBook = new AddressBook();
-        System.out.println("Welcome to Address Book System ");
-	Scanner sc = new Scanner(System.in);
-        boolean exit = false;
+        Scanner scanner = new Scanner(System.in);
+        addressBook.addNewAddressBook();
 
-        while(!exit) {
-        System.out.println("\nEnter 1. Add new Contact \nEnter 2. Edit Contact " +
-                "\nEnter 3. Show Contacts \nEnter 4. Delete Contact \nEnter 5. Exit");
-        int num = sc.nextInt();
-
-            switch (num) {
-
+        boolean flag1 = true;
+        while (flag1){
+            System.out.println("*************\n"+AddressBook.addressBookList.keySet());
+            System.out.println("current AddressBook Name: "+AddressBook.currentAddressBookName);
+            System.out.println("Select option\n1.Add Contact\n2.Edit Contact\n3.Show Contacts\n4.Delete Contact\n5.Add New AddressBook\n6.Select AddressBook\n7.Exit");
+            int option = scanner.nextInt();
+            switch (option){
                 case 1:
-                    addressBook.addNewContacts();
+                    Contact contact = addressBook.createContact();
+                    addressBook.addContact(contact);
                     break;
-
                 case 2:
                     addressBook.editContact();
                     break;
-                    
                 case 3:
-                    addressBook.showContacts();
+                    addressBook.showContacts(AddressBook.currentAddressBook);
                     break;
-                    
                 case 4:
                     addressBook.deleteContact();
                     break;
-
                 case 5:
-                    System.out.println("Exit !");
-                    exit = true;
+                    addressBook.addNewAddressBook();
+                    break;
+                case 6:
+                    addressBook.selectAddressBook();
+                    break;
+                case 7:
+                    flag1=false;
+                    break;
+                default:
+                    System.out.println(option+" is not valid option");
                     break;
 
-                default:
-                    System.out.println("Enter the correct number !");
-                    break;
             }
         }
     }
-	
 }
