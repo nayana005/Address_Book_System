@@ -1,87 +1,104 @@
 package com.bridgelabz;
 
-public class Contact implements Comparable {
+public class Contact {
 
 	 private String firstName;
-     private String lastName;
-     private String address;
-     private String city;
-     private String state;
-     private int zipCode;
-     private long phoneNumber;
-     private String email;
+	    private String lastName;
+	    private String address;
+	    private String city;
+	    private String state;
+	    private int zipCode;
+	    private long phoneNumber;
+	    private String email;
 
- public Contact(String firstName, String lastName, String address, String city, String state, int zipCode, long phoneNumber, String email) {
-     this.firstName = firstName;
-     this.lastName = lastName;
-     this.address = address;
-     this.city = city;
-     this.state = state;
-     this.zipCode = zipCode;
-     this.phoneNumber = phoneNumber;
-     this.email = email;
- }
+	    public Contact() {
+	    }
 
-     public String getFirstName() {
-     return firstName;
- }
+	    public String getFirstName() {
+	        return firstName;
+	    }
 
-     public void setFirstName(String firstName) {
-     this.firstName = firstName;
- }
+	    public void setFirstName(String firstName) {
+	        this.firstName = firstName;
+	    }
 
-     public void setLastName(String lastName) {
-     this.lastName = lastName;
- }
+	    public String getLastName() {
+	        return lastName;
+	    }
 
-     public void setAddress(String address) {
-     this.address = address;
- }
+	    public void setLastName(String lastName) {
+	        this.lastName = lastName;
+	    }
 
- public String getCity(){
-     return city;
- }
+	    public String getAddress() {
+	        return address;
+	    }
 
-     public void setCity(String city) {
-     this.city = city;
- }
+	    public void setAddress(String address) {
+	        this.address = address;
+	    }
 
- public String getState(){
-     return state;
- }
-     public void setState(String state) {
-     this.state = state;
- }
+	    public String getCity() {
+	        return city;
+	    }
 
-     public void setZipCode(int zipCode) {
-     this.zipCode = zipCode;
- }
+	    public void setCity(String city) {
+	        this.city = city;
+	    }
 
-     public void setPhoneNumber(long phoneNumber) {
-     this.phoneNumber = phoneNumber;
- }
+	    public String getState() {
+	        return state;
+	    }
 
-     public void setEmail(String email) {
-     this.email = email;
- }
+	    public void setState(String state) {
+	        this.state = state;
+	    }
 
-     @Override
-     public String toString() {
-     return "Contact{" +
-             "firstName='" + firstName + '\'' +
-             ", lastName='" + lastName + '\'' +
-             ", address='" + address + '\'' +
-             ", city='" + city + '\'' +
-             ", state='" + state + '\'' +
-             ", zip=" + zipCode +
-             ", phoneNumber=" + phoneNumber +
-             ", email='" + email + '\'' +
-             '}';
- }
+	    public int getZipCode() {
+	        return zipCode;
+	    }
 
- @Override
- public int compareTo(Object o) {
-     Contact person = (Contact) o;
-     return this.getFirstName().compareTo(person.getFirstName());
- }
-}
+	    public void setZipCode(int zipCode) {
+	        this.zipCode = zipCode;
+	    }
+
+	    public long getPhoneNumber() {
+	        return phoneNumber;
+	    }
+
+	    public void setPhoneNumber(long phoneNumber) {
+	        this.phoneNumber = phoneNumber;
+	    }
+
+	    public String getEmail() {
+	        return email;
+	    }
+
+	    public void setEmail(String email) {
+	        this.email = email;
+	    }
+
+	    public Contact(String firstName, String lastName, String address, String city, String state, int zipCode, long phoneNumber, String email) {
+	        this.firstName = firstName;
+	        this.lastName = lastName;
+	        this.address = address;
+	        this.city = city;
+	        this.state = state;
+	        this.zipCode = zipCode;
+	        this.phoneNumber = phoneNumber;
+	        this.email = email;
+	    }
+	    @Override
+	    public String toString() {
+	        return "Contact{" +
+	                "firstName='" + firstName + '\'' +
+	                ", lastName='" + lastName + '\'' +
+	                ", address='" + address + '\'' +
+	                ", city='" + city + '\'' +
+	                ", state='" + state + '\'' +
+	                ", zipCode=" + zipCode +
+	                ", phoneNumber=" + phoneNumber +
+	                ", email='" + email + '\'' +
+	                '}';
+	    }
+	}
