@@ -223,5 +223,25 @@ public class AddressBook{
             }
         }
     }
+    
+    void showContactCount() {
+        System.out.println("1.Count of City \n2.Count of State");
+        int option = sc.nextInt();
+        switch (option) {
+            case 1:
+                System.out.println("Enter city :");
+                String city = sc.next();
+                System.out.println("Count: " + cityContactList.get(city));
+                break;
+            case 2:
+                System.out.println("Enter State :");
+                String state = sc.next();
+                System.out.println("Count: " + stateContactList.get(state));
+                break;
+            default:
+                showContactCount();
+                break;
+        }
+    }
 }
 
