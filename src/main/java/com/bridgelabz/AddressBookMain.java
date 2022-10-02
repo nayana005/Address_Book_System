@@ -14,7 +14,7 @@ public class AddressBookMain {
         while (flag1){
             System.out.println("*************\n"+AddressBook.addressBookList.keySet());
             System.out.println("current AddressBook Name: "+AddressBook.currentAddressBookName);
-            System.out.println("Select option\n1.Add Contact\n2.Edit Contact\n3.Show Contacts\n4.Delete Contact\n5.Add New AddressBook\n6.Select AddressBook\n7.Exit");
+            System.out.println("Select option\n1.Add Contact\n2.Edit Contact\n3.Show Contacts\n4.Delete Contact\n5.Add New AddressBook\n6.Select AddressBook\n7.Search Contact\n8.Exit");
             int option = scanner.nextInt();
             switch (option){
                 case 1:
