@@ -104,9 +104,29 @@ public class AddressBook {
         }
     }
 
-    public void showContacts() {
+    public void deleteContact() {
 
-        if(contactArrayList.size() > 0) {
+    	if(contactArrayList.size() > 0) {
+
+    		System.out.println("Enter the First name of that person which information you want to delete");
+    		String deletePersonInfo = sc.next();
+
+    		for(int i = 0; i < contactArrayList.size(); i++) {
+
+    			if (contactArrayList.get(i).getFirstName().equals(deletePersonInfo)) {
+
+    				Contact contact = contactArrayList.get(i);
+    				contactArrayList.remove(contact);
+    				System.out.println("Contact deleted successfully");
+    			}
+    			else
+    				System.out.println("No more Contact found !");
+    		}
+    	}
+    }
+    		public void showContacts() {
+
+    			if(contactArrayList.size() > 0) {
             for (int i = 0; i < contactArrayList.size(); i++) {
                 System.out.println("\n"+contactArrayList);
             }

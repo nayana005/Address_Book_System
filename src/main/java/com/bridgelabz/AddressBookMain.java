@@ -13,7 +13,7 @@ public class AddressBookMain {
 
         while(!exit) {
         System.out.println("\nEnter 1. Add new Contact \nEnter 2. Edit Contact " +
-                "\nEnter 3. Show Contacts \nEnter 4. Exit");
+                "\nEnter 3. Show Contacts \nEnter 4. Delete Contact \nEnter 5. Exit");
         int num = sc.nextInt();
 
             switch (num) {
@@ -25,11 +25,16 @@ public class AddressBookMain {
                 case 2:
                     addressBook.editContact();
                     break;
+                    
                 case 3:
                     addressBook.showContacts();
                     break;
-
+                    
                 case 4:
+                    addressBook.deleteContact();
+                    break;
+
+                case 5:
                     System.out.println("Exit !");
                     exit = true;
                     break;
